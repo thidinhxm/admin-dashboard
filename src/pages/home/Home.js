@@ -21,7 +21,7 @@ const Home = () => {
 
         <div className={classes.charts}>
           <Featured />
-          <Chart />
+          <Chart aspect={2 / 1} title="Last 12 Months (Revenue)"/>
         </div>
         <div className={classes.listContainer}>
           <div className={classes.listTitle}>Lastest Transactions</div>
