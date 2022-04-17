@@ -6,29 +6,51 @@ import {
   SettingsApplications, AccountCircleOutlined, ExitToApp
 } from '@mui/icons-material';
 
+import { Link } from 'react-router-dom'
 const Sidebar = () => {
   return (
     <div className={classes.sidebar}>
       <div className={classes.top}>
-        <span className={classes.logo}>thiadmin</span>
+        <Link 
+          to='/' 
+          className={classes.link}
+        >
+          <span className={classes.logo}>thiadmin</span>
+        </Link>
       </div>
       <hr />
       <div className={classes.center}>
         <ul>
           <p className={classes.title}>MAIN</p>
-          <li>
-            <Dashboard className={classes.icon}/> 
-            <span>Dashboard</span>
-          </li>
+          <Link
+            to='/' 
+            className={classes.link}
+          >
+            <li>
+              <Dashboard className={classes.icon}/> 
+              <span>Dashboard</span>
+            </li>
+          </Link>
+         
           <p className={classes.title}>LIST</p>
-          <li>
-            <PersonOutline className={classes.icon}/>
-            <span>Users</span>
-          </li>
-          <li>
-            <Store className={classes.icon}/>
-            <span>Products</span>
-          </li>
+          <Link 
+            to='/users'
+            className={classes.link}
+          >
+            <li>
+              <PersonOutline className={classes.icon}/>
+              <span>Users</span>
+            </li>
+          </Link>
+          <Link 
+            to='/products'
+            className={classes.link}
+          >
+            <li>
+              <Store className={classes.icon}/>
+              <span>Products</span>
+            </li>
+          </Link>
           <li>
             <CreditCard className={classes.icon}/>
             <span>Orders</span>
